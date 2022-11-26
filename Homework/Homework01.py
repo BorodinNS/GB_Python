@@ -47,20 +47,10 @@ else:
     print("Некорректный ввод") """
 
 #5. Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 2D пространстве.
-coord_ax = float(input("Введите X у точки А: "))
+""" coord_ax = float(input("Введите X у точки А: "))
 coord_ay = float(input("Введите Y у точки А: "))
 coord_bx = float(input("Введите X у точки B: "))
 coord_by = float(input("Введите Y у точки B: "))
 print(f"Точки: А({coord_ax}, {coord_ay}), B({coord_bx}, {coord_by})")
 distance_AB = (((coord_bx-coord_ax)**2)+((coord_by-coord_ay)**2))**0.5
-print('Расстояние между точками A и B равно: ' f'{round(distance_AB, 2)}')
-
-
-""" print('Напишите программу, которая принимает на вход координаты ')
-print('двух точек и находит расстояние между ними в 2D пространстве.')
-Ax = float(input('Введите Ax: '))
-Ay = float(input('Введите Ay: '))
-Bx = float(input('Введите Bx: '))
-By = float(input('Введите By: '))
-AB = (((Bx-Ax)**2)+((By-Ay)**2))**0.5
-print('Расстояние между точками равно: AB = ', round(AB, 3)) """
+print('Расстояние между точками A и B равно: ' f'{round(distance_AB, 2)}') """
