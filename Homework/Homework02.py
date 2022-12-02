@@ -1,8 +1,9 @@
 #1. Напишите программу, которая принимает на вход вещественное число и показывает сумму его цифр.
+
 """ num = abs(float(input('Введите вещественное число: ')))
 sum = 0
 for i in str(num):
-    if i != '.':
+    if i.isdigit():
         sum = sum + int(i)
 print('Сумма цифр  равна: ', sum) """
 
@@ -11,12 +12,15 @@ print('Сумма цифр  равна: ', sum) """
 """ num = abs(int(input('Введите число N: ')))
 i = 1
 fibbo = 1
-while i <= num:
+fibbo_list = list(range(1, num+1))
+for i in range(1, num+1):
     fibbo *= i
-    i += 1
-    print(f'Произведение чисел от 1 до {i-1} = ', fibbo) """
+    print(f'Произведение чисел от 1 до {i} = ', fibbo)
+    fibbo_list[i-1] = fibbo
+print(fibbo_list) """
 
 #3. Дан массив размера N. После каждого отрицательного элемента массива вставьте элемент с нулевым значением.
+
 """ import random
 
 n_list = []
@@ -30,6 +34,7 @@ for i in range(0, len(n_list)+1):
 print(n_list) """
 
 #4. Составьте алгоритм нахождения случайного числа без использования библиотеки random.
+
 """ import datetime as t
 import time
 
