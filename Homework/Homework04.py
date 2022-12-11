@@ -1,59 +1,59 @@
 # 1. Задайте натуральное число N. Напишите программу, которая составит список простых множителей числа N.
-# def simple_multiplier():
-#     """Список простых множителей числа N"""
-#     n = int(input('Введите число N: '))
-#     nums = list()
-#     multiplier = 2
-#     while n >= multiplier:
-#         while n % multiplier == 0:
-#             n /= multiplier
-#             nums.append(multiplier)
-#         multiplier += 1
-#     nums = list(set(nums))
-#     nums.sort()
-#     print('Список простых множителей числа N:', nums)
+def simple_multiplier():
+    """Список простых множителей числа N"""
+    n = int(input('Введите число N: '))
+    nums = list()
+    multiplier = 2
+    while n >= multiplier:
+        while n % multiplier == 0:
+            n /= multiplier
+            nums.append(multiplier)
+        multiplier += 1
+    nums = list(set(nums))
+    nums.sort()
+    print('Список простых множителей числа N:', nums)
 
 
 # simple_multiplier()
 
 # 2. Задайте последовательность чисел. Напишите программу, которая выведет список неповторяющихся элементов исходной последовательности.
-# Не использовать множества.
-# def not_repeating_elements():
-#     """Ввод списка и вывод неповторяющихся элементов в нём"""
-#     numbers = input('Введите список элементов через пробел: ')
-#     numbers = list(map(int, numbers.split()))
-#     unique = []
-#     for i in numbers:
-#         if i in unique:
-#             continue
-#         else:
-#             unique.append(i)
-#     print('Введённая последовательность чисел:\t', numbers)
-#     print('Список элементов без повторений:\t', unique)
-# not_repeating_elements()
+#Не использовать множества.
+def not_repeating_elements():
+    """Ввод списка и вывод неповторяющихся элементов в нём"""
+    numbers = input('Введите список элементов через пробел: ')
+    numbers = list(map(int, numbers.split()))
+    unique = []
+    for i in numbers:
+        if i in unique:
+            continue
+        else:
+            unique.append(i)
+    print('Введённая последовательность чисел:\t', numbers)
+    print('Список элементов без повторений:\t', unique)
+not_repeating_elements()
 
 # 3. В файле, содержащем фамилии студентов и их оценки, изменить на буквы в верхнем регистре тех студентов, которые имеют средний балл более «4».
-# from typing import List
+from typing import List
 
-# def change_list(file: List[str], for_change: str) -> str:
-#     """ Принимает список, возвращает список с большими буквами """
-#     new_list = ''
-#     for i in file:
-#         if i.count(for_change):
-#             i = i.upper()
-#         string = i + '\n'
-#         new_list += string
-#     return new_list
+def change_list(file: List[str], for_change: str) -> str:
+    """ Принимает список, возвращает список с большими буквами """
+    new_list = ''
+    for i in file:
+        if i.count(for_change):
+            i = i.upper()
+        string = i + '\n'
+        new_list += string
+    return new_list
 
-# new_list = open('D:\Обучение\GeekBrains\Вторая четверть\Python\Homework\HW04.txt', 'r', encoding='utf-8')
-# lines_read = new_list.read().split('\n')
-# new_list.close()
+new_list = open('D:\Обучение\GeekBrains\Вторая четверть\Python\Homework\HW04.txt', 'r', encoding='utf-8')
+lines_read = new_list.read().split('\n')
+new_list.close()
 
-# result_list = change_list(lines_read, for_change = '5')
+result_list = change_list(lines_read, for_change = '5')
 
-# new_list = open('D:\Обучение\GeekBrains\Вторая четверть\Python\Homework\HW04.txt', 'w', encoding='utf-8')
-# new_list.write(result_list)
-# new_list.close()
+new_list = open('D:\Обучение\GeekBrains\Вторая четверть\Python\Homework\HW04.txt', 'w', encoding='utf-8')
+new_list.write(result_list)
+new_list.close()
 
 #4. Шифр Цезаря - это способ шифрования, где каждая буква смещается на определенное количество символов влево или вправо. 
 # При расшифровке происходит обратная операция. К примеру, слово "абба" можно зашифровать "бввб" - сдвиг на 1 вправо. "вггв" - сдвиг на 2 вправо,
