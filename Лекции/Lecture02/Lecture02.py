@@ -4,18 +4,18 @@
 
 # a
 colors = ['red', 'green', 'blue']
-data = open('file.txt', 'a')
+data = open('D:\Обучение\GeekBrains\Вторая четверть\Python\Лекции\Lecture02\Lecrure02.txt', 'a')
 data.writelines(colors) #разделителей не будет
 data.close
 exit
 
 #Тоже самое, но короче
-with open('file.txt', 'a') as data:
+with open('D:\Обучение\GeekBrains\Вторая четверть\Python\Лекции\Lecture02\Lecrure02.txt', 'a') as data:
     data.write('line1 \n')
     data.write('line2 \n')
 
 # r
-path = 'file.txt'
+path = 'D:\Обучение\GeekBrains\Вторая четверть\Python\Лекции\Lecture02\Lecrure02.txt'
 data = open(path, 'r')
 for line in data:
     print(line)
